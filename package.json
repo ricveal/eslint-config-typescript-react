@@ -1,0 +1,65 @@
+{
+  "name": "eslint-config-typescript-react",
+  "version": "0.1.0",
+  "description": "My ESLint config with TypeScript and Prettier support for react projects",
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "airbnb",
+    "typescript",
+    "prettier"
+  ],
+  "scripts": {
+    "test": "eslint --ext .tsx,ts test/",
+    "release": "npm run test && standard-version",
+    "release:dryrun": "standard-version --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricveal/eslint-config-typescript-react.git"
+  },
+  "author": "Ricardo Vega - ricveal <ricveal@gmail.com> (https://ricveal.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ricveal/eslint-config-typescript-react/issues"
+  },
+  "homepage": "https://github.com/ricveal/eslint-config-typescript-react#readme",
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/react": "^16.9.17",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.3",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "standard-version": "^7.0.1",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
