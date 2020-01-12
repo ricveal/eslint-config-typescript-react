@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-typescript-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My ESLint config with TypeScript and Prettier support for react projects",
   "main": "index.js",
   "keywords": [
